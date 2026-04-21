@@ -1,9 +1,9 @@
 /** EL2008 Praktikum Pemecahan Masalah dengan Pemrograman 2025/2026
  *   Modul               : 2
- *   Hari dan Tanggal    : 
+ *   Hari dan Tanggal    : Selasa, 21 April 2026
  *   Nama (NIM)          : Zulfan Hanani (13224105)
  *   Nama File           : soal1.c
- *   Deskripsi           : 
+ *   Deskripsi           : Membuat kalimat valid jika '(' memiliki pasangan ')' setelahnya
  * 
  */
 
