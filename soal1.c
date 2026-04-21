@@ -18,7 +18,7 @@
         scanf("%c", &array[i]);
         if (array[i] == '\n'){
             array[i] = '\0';
-            idx = i;
+            idx = i-1;
             break;
         }
     }
@@ -32,24 +32,24 @@
 
     //pengecekan
     for (int i = 0; i < idx; i++){
-        int valid = 1;
+        // int valid = 1;
         if (temparray[i] == '('){
-            valid = 0;
+            // valid = 0;
             for (int j = i; j < idx; j++){
                 if (temparray[j] == ')'){
                     temparray[i] = 1;
                     temparray[j] = 1;
-                    valid = 1;
+                    // valid = 1;
                     break;
                 } 
             }
         }else if (temparray[i] == ')'){
-            valid = 0;
+            // valid = 0;
             for (int j = 0; j < i; j++){
                 if (temparray[j] == '('){
                     temparray[i] = 1;
                     temparray[j] = 1;
-                    valid = 1;
+                    // valid = 1;
                     break;
                 }
             }
@@ -70,23 +70,23 @@
     }
 
     //penghapusan karakter tidak valid
+    // for (int i = 0; i < idx; i++){
+    //     if (index[i] == 1){
+    //         if (i == idx - 1){
+    //             idx--;
+    //             // printf("\nBerhasil");
+    //         }else{
+    //             for (int j = i; j < idx - 1; j++){
+    //                 array[j] = array[j+1];
+    //             }
+    //             idx--;
+    //         }
+    //     }
+    // }
     for (int i = 0; i < idx; i++){
-        if (index[i] == 1){
-            if (i == idx - 1){
-                idx--;
-                // printf("\nBerhasil");
-            }else{
-                for (int j = i; j < idx - 1; j++){
-                    array[j] = array[j+1];
-                }
-                idx--;
-            }
+        if (index[i] == -1){
+            printf("%c", array[i]);
         }
-    }
-
-    printf("\n%d Hasil: ", idx);
-    for (int i = 0; i < idx; i++){
-        printf("%c", array[i]);
     }
 
     return 0;
