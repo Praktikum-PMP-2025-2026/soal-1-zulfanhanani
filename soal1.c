@@ -12,8 +12,6 @@
   
  int main() {
     char array[30];
-    int jml1 = 0;
-    int jml2 = 0;
     int idx;
     
     for (int i = 0; i < 10; i++){
@@ -58,7 +56,7 @@
         }
     }
 
-    printf("%s", array);
+    printf("%s\n", array);
 
     return 0;
  }
