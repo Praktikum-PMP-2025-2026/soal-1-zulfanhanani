@@ -9,19 +9,23 @@
 
 
  #include <stdio.h>
+ #include <string.h>
   
  int main() {
     char array[30];
     int idx;
 
-    for (int i = 0; i < 10; i++){
-        scanf("%c", &array[i]);
-        if (array[i] == '\n'){
-            array[i] = '\0';
-            idx = i-1;
-            break;
-        }
-    }
+    scanf("%s", array);
+    idx = strlen(array);
+    // printf("%d", idx);
+    // for (int i = 0; i < 10; i++){
+    //     scanf("%c", &array[i]);
+    //     if (array[i] == '\n'){
+    //         array[i] = '\0';
+    //         idx = i-1;
+    //         break;
+    //     }
+    // }
 
     char temparray[idx];
     int index[idx];
@@ -66,7 +70,7 @@
         if (temparray[i] == '(' || temparray[i] == ')'){
             index[i] = 1;
         }
-        printf("%d ", index[i]); // debug
+        // printf("%d ", index[i]); // debug
     }
 
     //penghapusan karakter tidak valid
